@@ -19,6 +19,6 @@ jobs:
 
       - name: Clonando repositório
         run: |
-          git clone https://${{ secrets.TOKEN_REPOS }}@github.com/V8-PROJETO-RH/DEVOPs.git
+          git clone https://${{ secrets.TOKEN_REPOS }}@github.com/V8-PROJETO-RH/DEVOPS.git
         env:
           TOKEN_REPOS: ${{ secrets.TOKEN_REPOS }}
