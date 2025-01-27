@@ -8,3 +8,18 @@ on:
     types:
       - push-event
   workflow_dispatch: {}
+
+  jobs:
+    multi-repo:
+      runs-on: ubuntu-latest
+
+
+      steps:
+        - name: Checando repositório Main
+          uses: actions/checkout@v3
+
+        - name: Clonando repositório 
+          run: |
+            git clone https://${{TOKEN_REPOS}}@github.com/V8-PROJETO-RH/DEVOPs.git
+          env:
+            PAT: ${{ secrets.TOKEN_REPOS}}
